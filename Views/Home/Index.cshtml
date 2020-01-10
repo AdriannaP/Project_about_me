@@ -1,0 +1,19 @@
+﻿@using ProjectAboutMe.Controllers
+@model IEnumerable<ProjectAboutMe.ViewModels.SquareViewModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h3> I'm Adrianna Paczocha</h3>
+    <p> Find out the facts abaut me by clicking the tiles </p>
+    @foreach (var square in Model)
+    {
+        <a href="@Url.Action("Details","Home", new { id = square.Id })">
+       <span class="tile" style="background-image: url(@square.Image)" )></span>
+        </a>
+    }
+</div>

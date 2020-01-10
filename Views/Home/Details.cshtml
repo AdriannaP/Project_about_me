@@ -1,0 +1,17 @@
+﻿@model ProjectAboutMe.ViewModels.SquareViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <h4> @Model.Name</h4>
+    <hr />
+    <dl class="row">
+        @Model.Description
+    </dl>
+    <span class="tile" style="background-image: url(@Model.Image)" )> </span>
+
+</div>
+<div>
+    <a asp-action="Index">Back to main page</a>
+</div>
